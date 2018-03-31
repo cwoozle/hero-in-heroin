@@ -20,26 +20,6 @@
       var map;
       var infowindow;
 
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-
       if (pos) {
       } else {
         var pos = {lat: 43.6573, lng: -79.3872}
@@ -59,7 +39,7 @@
         service.nearbySearch({
           location: pos,
           radius: 25000,
-          keyword: "naloxone" 
+          keyword: "drug clinic" 
         }, callback);
 
 
@@ -86,6 +66,33 @@
         });
       }
     </script>
+
+<script>
+          if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position)
+          {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+</script>
+
+<script type="text/javascript">
+  console.log(pos)
+</script>
+
 
   </head>
 
