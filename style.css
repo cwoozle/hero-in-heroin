@@ -3,26 +3,31 @@ html, body
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', sans-serif;
+	background: url(img/background5.jpg) no-repeat center center fixed;
+	background-size: contain;
+	
+	
 }
 
 #home{
-	background-color: #2778B2; 
+	
 	display: table;
 	height: 100%;
 	position: relative;
 	width: 100%;
 
-	background-size:cover; 
+
 }
 
 .landing-text {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
+	color: #FFFFFF;
 }
 
 .landing-text h1{
 	font-size: 800%;
-	font-weight: : 700; 
+	font-weight: 2000; 
 }
 .btn{min-width:350px;}
