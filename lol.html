@@ -57,7 +57,7 @@
 
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
-            zoom: 10
+            zoom: 9
           });
 
           infowindow = new google.maps.InfoWindow();
@@ -65,7 +65,7 @@
           var service = new google.maps.places.PlacesService(map);
           service.nearbySearch({
             location: pos,
-            radius: 25000,
+            radius: 50000,
             keyword: "drug clinic" 
           }, callback);
 
