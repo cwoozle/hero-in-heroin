@@ -4,7 +4,7 @@ html, body
 	width: 100%;
 	font-family: 'Lato', sans-serif;
 	background: url(img/background5.jpg) no-repeat center center fixed;
-	background-size: contain;
+	background-size: cover;
 	
 	
 }
