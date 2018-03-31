@@ -42,7 +42,7 @@
 
       if (pos) {
       } else {
-        var pos = {lat: 40.3573, lng: -74.6672}
+        var pos = {lat: 43.6573, lng: -79.3872}
       }
 
 
@@ -59,8 +59,10 @@
         service.nearbySearch({
           location: pos,
           radius: 25000,
-          keyword: "methadone" 
+          keyword: "naloxone" 
         }, callback);
+
+
       }
 
       function callback(results, status) {
