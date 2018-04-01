@@ -1,5 +1,6 @@
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
 		body {
     margin: 0;            /* Reset default margin */
@@ -23,12 +24,25 @@ iframe {
     background-color: #666;
 }
 	</style>
+
+    <script>
+        $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('https://console.dialogflow.com/api-client/demo/embedded/3b6f38dd-22fa-477c-9b06-6941bf5988d1') + '&callback=?', function(data){
+            var test = data.contents;
+            console.log(test)
+});
+    </script>
 	</head>
 <body>
-	<iframe
+    <script>
+    var ifrm = document.getElementById('myframe');
+
+
+    </script>
+	<iframe 
+    id="myframe"
     width=50%
     height=50%
-    src="https://console.dialogflow.com/api-client/demo/embedded/3b6f38dd-22fa-477c-9b06-6941bf5988d1">
+    src="https://console.dialogflow.com/api-client/demo/embedded/3b6f38dd-22fa-477c-9b06-6941bf5988d1" >
     </iframe>
 
 <div id="container">
@@ -55,5 +69,8 @@ function videoError(e) {
 }
 </script>
 
+<script>
+    
+</script>
 </body>
 </html>
