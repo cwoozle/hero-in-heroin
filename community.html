@@ -22,6 +22,7 @@
           center: {lat: 43.643, lng: -79.387},
           zoom: 10
         });
+        map2.data.loadGeoJson('http://localhost:8000/needles.json');
 
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
